@@ -14,11 +14,10 @@ namespace Proyecto_EFSTRIII.Controllers
     public class DistritoController : Controller
     {
         static string cadena = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
-        static string cadena2 = "Server = 18.207.63.198 ; Database= EFSTRIII ; User ID= cibertec; Password=cibertec123";
         IEnumerable<Distrito> GetDistritos()
         {
             List<Distrito> distritos = new List<Distrito>();
-            using (MySqlConnection connection = new MySqlConnection(cadena2))
+            using (MySqlConnection connection = new MySqlConnection(cadena))
             {
                 MySqlCommand cmd = new MySqlCommand("GetDistritos", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
