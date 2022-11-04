@@ -9,6 +9,5 @@ namespace Proyecto_EFSTRIII.Models
     {
         public int idDistrito { get; set; }
         public string nombreDistrito { get; set; }
-        public string lugarDistrito { get; set; }
     }
 }

@@ -17,8 +17,11 @@ namespace Proyecto_EFSTRIII.Models
         [Display(Name = "Dirección")]
         public string direccionCliente { get; set; }
 
+        [Display(Name = " ID Distrito")]
+        public int  idDistrito { get; set; }
+
         [Display(Name = "Distrito")]
-        public string distritoCliente { get; set; }
+        public string nombreDistrito { get; set; }
 
         [Display(Name = "Correo ")]
         public string correoCliente { get; set; }
