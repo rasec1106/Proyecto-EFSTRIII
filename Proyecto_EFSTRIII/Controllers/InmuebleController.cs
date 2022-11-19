@@ -63,7 +63,7 @@ namespace Proyecto_EFSTRIII.Controllers
             return tipoInmuebles;
         }
 
-        IEnumerable<Inmueble> GetInmueble()
+        public IEnumerable<Inmueble> GetInmueble()
         {
             List<Inmueble> inmuebles = new List<Inmueble>();
             using (MySqlConnection connection = new MySqlConnection(cadena))

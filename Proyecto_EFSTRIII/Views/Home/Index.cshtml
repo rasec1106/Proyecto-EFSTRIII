@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Proyecto_EFSTRIII.Models.Inmueble>
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -37,151 +38,30 @@
 *************************************
 -->
 <section>
+    
     <div class="m-x-5">
         <div class="container-fluid">
+                <div class="row">
+            @foreach (var item in Model)
+            {
+                    <div class="col-3">
+                        <div class="card card-normal">
+                            <a href="./detalle.html" class="link">
+                                <img class="card-img-top product-img" src="https://www.terracorp.cl/blog/wp-content/uploads/2020/03/casas-y-departamentos-en-venta.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0 text-center">@item.descInmueble</h5>
+                                    <p class="card-text text-center my-1">@item.nombreDistrito</p>
+                                    <p class="card-text text-center my-1">S./ @item.costoInmueble</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            }
+                </div>
             <div class="row mb-3">
 
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo3.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Feliz Cumpleaños</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo4.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Te Adoro</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo5.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Osito</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo6.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Osito Azul</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row mb-3">
-
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Flores</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo13.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Box Rosas Rojas</h5>
-                                <p class="card-text text-center my-1">S./ 175.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo14.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Desayuno "Princess"</h5>
-                                <p class="card-text text-center my-1">S./ 199.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo9.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Torta de Chocolate</h5>
-                                <p class="card-text text-center my-1">S./ 55.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row mb-3">
-
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo10.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Pack Fiesta</h5>
-                                <p class="card-text text-center my-1">S./ 180.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo11.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Globo Feliz Cumpleaños</h5>
-                                <p class="card-text text-center my-1">S./ 45.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Regalo12.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Pack Para Él</h5>
-                                <p class="card-text text-center my-1">S./ 199.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card card-normal">
-                        <a href="./detalle.html" class="link">
-                            <img class="card-img-top product-img" src="../imagenes/Peluche.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title mb-0 text-center">Topper Osito Blanco</h5>
-                                <p class="card-text text-center my-1">S./ 25.00</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
             <nav aria-label="Page navigation example" id="pagination">
                 <ul class="pagination justify-content-center">
                     <li class="page-item">
