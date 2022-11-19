@@ -46,18 +46,18 @@
                 @Html.ValidationMessageFor(model => model.idDistrito, "", new { @class = "text-danger" })
             </div>
         </div>
+        <br />
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                @Html.ActionLink("Retornar", "Index", null, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Limpiar", "Create", null, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

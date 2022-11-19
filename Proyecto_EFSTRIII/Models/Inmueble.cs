@@ -25,6 +25,9 @@ namespace Proyecto_EFSTRIII.Models
         [Display(Name = "Id Distrito")]
         public int idDistrito { get; set; }
 
+        [Display(Name ="Imagen")]
+        public string urlImagen { get; set; }
+
         [Display(Name = "Distrito")]
         public string nombreDistrito { get; set; }
     }

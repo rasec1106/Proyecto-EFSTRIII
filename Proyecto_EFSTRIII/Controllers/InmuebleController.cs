@@ -75,6 +75,16 @@ namespace Proyecto_EFSTRIII.Controllers
                 MySqlDataReader dr = command.ExecuteReader();
                 while (dr.Read())
                 {
+                    string urlImagen2 = "";
+                    try
+                    {
+                        urlImagen2 = dr.GetString(6);
+                    }
+                    catch (Exception ex)
+                    {
+                        urlImagen2 = "";
+                    }
+
                     inmuebles.Add(new Inmueble()
                     {
                         idInmueble = dr.GetInt32(0),
@@ -83,8 +93,13 @@ namespace Proyecto_EFSTRIII.Controllers
                         ubiInmueble = dr.GetString(3),
                         costoInmueble = dr.GetDecimal(4),
                         idDistrito = dr.GetInt32(5),
-                        nombreDistrito = dr.GetString(6)
+                        urlImagen = urlImagen2,
+                        nombreDistrito = dr.GetString(7)
+                        
+                                           
+                        
                     });
+
                 }
             }
             return inmuebles;
@@ -132,6 +147,7 @@ namespace Proyecto_EFSTRIII.Controllers
                 cmd.Parameters.AddWithValue("prmstrUbicInmueble", inmueble.ubiInmueble);
                 cmd.Parameters.AddWithValue("prmstrCostoInmueble", inmueble.costoInmueble);
                 cmd.Parameters.AddWithValue("prmintIdDistrito", inmueble.idDistrito);
+                cmd.Parameters.AddWithValue("prmstrUrlImagen", "");
                 connection.Open();
 
                 int cantidadActualizada = cmd.ExecuteNonQuery();
@@ -181,6 +197,7 @@ namespace Proyecto_EFSTRIII.Controllers
                 cmd.Parameters.AddWithValue("@prmstrUbicInmueble", inmueble.ubiInmueble);
                 cmd.Parameters.AddWithValue("@prmstrCostoInmueble", inmueble.costoInmueble);
                 cmd.Parameters.AddWithValue("@prmintIdDistrito", inmueble.idDistrito);
+                cmd.Parameters.AddWithValue("prmstrUrlImagen", "");
                 connection.Open();
 
                 int cantidadActualizada = cmd.ExecuteNonQuery();
