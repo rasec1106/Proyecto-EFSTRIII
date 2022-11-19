@@ -170,13 +170,17 @@
     <Compile Include="Controllers\DistritoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InmuebleController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Condicion.cs" />
     <Compile Include="Models\Distrito.cs" />
+    <Compile Include="Models\FormaPago.cs" />
     <Compile Include="Models\Inmueble.cs" />
     <Compile Include="Models\TipoInmueble.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +226,9 @@
     <Content Include="Views\Inmueble\Index.cshtml" />
     <Content Include="Views\Inmueble\Create.cshtml" />
     <Content Include="Views\Inmueble\Edit.cshtml" />
+    <Content Include="Views\Venta\Index.cshtml" />
+    <Content Include="Views\Venta\Create.cshtml" />
+    <Content Include="Views\Venta\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

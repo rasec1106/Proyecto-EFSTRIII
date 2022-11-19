@@ -212,6 +212,7 @@ namespace Proyecto_EFSTRIII.Controllers
             }
             finally
             {
+
                 connection.Close();
             }
 
