@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_EFSTRIII.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace Proyecto_EFSTRIII.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<Inmueble> inmuebles = new InmuebleController().GetInmueble();
+            return View(inmuebles);
         }
 
         public ActionResult About()

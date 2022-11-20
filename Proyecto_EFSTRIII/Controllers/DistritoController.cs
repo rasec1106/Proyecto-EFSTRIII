@@ -29,8 +29,8 @@ namespace Proyecto_EFSTRIII.Controllers
                     distritos.Add(new Distrito()
                     {
                         idDistrito = dr.GetInt32(0),
-                        nombreDistrito = dr.GetString(1),
-                        lugarDistrito = dr.GetString(2)
+                        nombreDistrito = dr.GetString(1)
+                    
                     });
                 }
             }
