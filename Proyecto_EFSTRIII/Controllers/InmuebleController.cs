@@ -147,7 +147,7 @@ namespace Proyecto_EFSTRIII.Controllers
                 cmd.Parameters.AddWithValue("prmstrUbicInmueble", inmueble.ubiInmueble);
                 cmd.Parameters.AddWithValue("prmstrCostoInmueble", inmueble.costoInmueble);
                 cmd.Parameters.AddWithValue("prmintIdDistrito", inmueble.idDistrito);
-                cmd.Parameters.AddWithValue("prmstrUrlImagen", "");
+                cmd.Parameters.AddWithValue("prmstrUrlImagen", inmueble.urlImagen);
                 connection.Open();
 
                 int cantidadActualizada = cmd.ExecuteNonQuery();
@@ -197,7 +197,7 @@ namespace Proyecto_EFSTRIII.Controllers
                 cmd.Parameters.AddWithValue("@prmstrUbicInmueble", inmueble.ubiInmueble);
                 cmd.Parameters.AddWithValue("@prmstrCostoInmueble", inmueble.costoInmueble);
                 cmd.Parameters.AddWithValue("@prmintIdDistrito", inmueble.idDistrito);
-                cmd.Parameters.AddWithValue("prmstrUrlImagen", "");
+                cmd.Parameters.AddWithValue("prmstrUrlImagen", inmueble.urlImagen);
                 connection.Open();
 
                 int cantidadActualizada = cmd.ExecuteNonQuery();
