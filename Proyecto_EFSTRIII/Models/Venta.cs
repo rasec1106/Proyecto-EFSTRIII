@@ -46,7 +46,7 @@ namespace Proyecto_EFSTRIII.Models
         public decimal totalGeneral { get; set; }
 
         [Display(Name = "Fecha de Venta")]
-        public string fechaVenta { get; set; }
+        public DateTime fechaVenta { get; set; }
 
     }
 }

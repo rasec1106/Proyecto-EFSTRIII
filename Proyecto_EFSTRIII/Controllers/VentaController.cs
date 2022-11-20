@@ -146,7 +146,7 @@ namespace Proyecto_EFSTRIII.Controllers
                         idTipoInmueble = dr.GetInt32(9),
                         descripTipoInmueble=dr.GetString(10),
                         totalGeneral = dr.GetDecimal(11),
-                        fechaVenta = dr.GetDateTime(12).ToString("dd/MM/yyyy")
+                        fechaVenta = dr.GetDateTime(12)
 
                     });
                 }
@@ -253,7 +253,7 @@ namespace Proyecto_EFSTRIII.Controllers
                 cmd.Parameters.AddWithValue("prmintTotalVenta", ventas.totalVenta);
                 cmd.Parameters.AddWithValue("prmintIdTipoInmueble", ventas.idTipoInmueble);
                 cmd.Parameters.AddWithValue("prmintTotalGeneral", ventas.totalGeneral);
-                cmd.Parameters.AddWithValue("prmdateFechaVenta", ventas.fechaVenta);
+                cmd.Parameters.AddWithValue("prmdateFechaVenta", ventas.fechaVenta.ToString("yyyy-MM-dd"));
                 connection.Open();
 
                 int cantidadActualizada = cmd.ExecuteNonQuery();
